@@ -1,0 +1,1 @@
+/home/bashit/.bash_it/plugins/available/browser.plugin.bash
