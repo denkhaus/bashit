@@ -50,7 +50,7 @@ _tmuxpload(){
 alias tl=_tmuxpload
 
 #docker
-alias docker_rm_untagged_images='docker rmi $(docker images | grep "<none>" | tr -s ' ' | cut -d ' ' -f 3)'
+alias docker_rm_untagged_images='docker rmi $(docker images | grep "<none>" | tr -s " " | cut -d " " -f 3)'
 
 
 #tripwire
