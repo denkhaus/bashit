@@ -51,3 +51,11 @@ alias tl=_tmuxpload
 
 #docker
 alias docker-rm-untagged-images='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+
+
+#tripwire
+alias tw-check='sudo tripwire --check --interactive'
+
+#bashit
+alias bashit-pull='chu bashit && git pull --all && exit'
+alias bashit-push='chu bashit && git push --all && exit'
