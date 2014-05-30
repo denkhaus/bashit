@@ -50,12 +50,12 @@ _tmuxpload(){
 alias tl=_tmuxpload
 
 #docker
-alias docker-rm-untagged-images='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+alias docker_rm_untagged_images='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 
 
 #tripwire
-alias tw-check='sudo tripwire --check --interactive'
+alias tw_check='sudo tripwire --check --interactive'
 
 #bashit
-alias bashit-pull='chu bashit && git pull --all && exit'
-alias bashit-push='chu bashit && git push --all && exit'
+alias bashit_pull='sudo su - bashit -s /bin/bash/ -c "git pull --all"'
+

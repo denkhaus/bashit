@@ -15,7 +15,15 @@ get_js_val()
 	echo $1 | python -c "$c"
 }
 
+git_isdirty(){
+	[[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]]
+}
 
+git_autopush(){
+	epoch=$(date +%s)
+	git_isdirty && git commit -am "autopush @ $epoch"
+	git push --all
+}
 
 # From: http://julienrenaux.fr/2013/10/04/how-to-automatically-checkout-the-latest-tag-of-a-git-repository/
 git_checkout_latest_tag()
