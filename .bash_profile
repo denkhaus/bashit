@@ -41,3 +41,4 @@ unset MAILCHECK
 
 # Load Bashit
 source $BASH_IT/bash_it.sh
+source .bash_local
