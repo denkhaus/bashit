@@ -50,11 +50,11 @@ _tmuxpload(){
 alias tl=_tmuxpload
 
 #docker
-alias docker_rm_images_by_match='docker rmi $(docker images | grep $1 | tr -s " " | cut -d " " -f 3)'                                                                                                               
-alias docker_rm_untagged_images='docker_rm_images_by_match "<none>"'
-alias docker_rm_container='docker rm $(docker ps -a -q)'
-alias docker_stop_all_containers='docker stop $(docker ps -q)'
-
+alias docker_rm_img_match='docker rmi $(docker images | grep $1 | tr -s " " | cut -d " " -f 3)'                                                                                                               
+alias docker_rm_img_untagged='docker_rm_img_match "<none>"'
+alias docker_rm_cnt_all='docker rm $(docker ps -a -q)'
+alias docker_stp_cnt_all='docker stop $(docker ps -q)'
+alias docker_stp_cnt_match='docker stop $(docker ps | grep $1 | tr -s " " | cut -d " " -f 1)'
 
 #tripwire
 alias tw_check='sudo tripwire --check --interactive'
