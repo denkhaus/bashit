@@ -60,6 +60,7 @@ _docker_stp_cnt_match(){
 alias docker_rm_img_match=_docker_rm_image_match
 alias docker_rm_img_untagged='docker_rm_img_match <none>'
 alias docker_rm_cnt_all='docker rm $(docker ps -a -q)'
+alias docker_rm_cnt_all_force='docker rm -f $(docker ps -a -q)'
 alias docker_stp_cnt_all='docker stop $(docker ps -q)'
 alias docker_stp_cnt_match=_docker_stp_cnt_match
 
