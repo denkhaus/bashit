@@ -50,12 +50,8 @@ _tmuxpload(){
 alias tl=_tmuxpload
 
 #docker
-_docker_rm_image_match(){
- docker rmi $(docker images | grep $1 | tr -s " " | cut -d " " -f 3)
-}
-_docker_stp_cnt_match(){
- docker stop $(docker ps | grep $1 | tr -s " " | cut -d " " -f 1)
-}
+_docker_rm_image_match(){ docker rmi -f $(docker images | grep $1 | tr -s " " | cut -d " " -f 3)}
+_docker_stp_cnt_match(){ docker stop $(docker ps | grep $1 | tr -s " " | cut -d " " -f 1)}
 
 alias docker_rm_img_match=_docker_rm_image_match
 alias docker_rm_img_untagged='docker_rm_img_match <none>'
