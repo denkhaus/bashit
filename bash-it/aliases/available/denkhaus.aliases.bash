@@ -61,7 +61,7 @@ _docker_rm_untagged(){
  docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 }
 
-alias dclean=_cocker_rm_untagged_img
+alias dclean=_docker_rm_untagged_img
 alias docker_rm_img_match=_docker_rm_image_match
 alias docker_rm_img_untagged='docker_rm_img_match <none>'
 alias docker_rm_cnt_all='docker rm $(docker ps -a -q)'
