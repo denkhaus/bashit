@@ -58,7 +58,7 @@ _docker_stp_cnt_match(){
 }
 
 _docker_rm_img_untagged(){
- docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
+ docker rmi -f $(docker images | grep '^<none>' | awk '{print $3}')
 }
 
 alias dclean=_docker_rm_img_untagged
