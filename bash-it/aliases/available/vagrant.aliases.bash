@@ -8,6 +8,7 @@ alias vs="vagrant suspend"
 alias vr="vagrant resume"
 alias vrl="vagrant reload"
 alias vssh="vagrant ssh"
+alias vi='vagrant init'
 alias vst="vagrant status"
 alias vp="vagrant provision"
 alias vdstr="vagrant destroy"
