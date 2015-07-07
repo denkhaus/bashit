@@ -26,11 +26,19 @@ alias grm='git reset --merge'
 alias portuse='sudo netstat -nap | grep $1'
 alias findbig='sudo du -h $1 | grep [0-9]G'
 
+
+#rdesktop 
+
+_rdp(){
+ rdesktop $1 -g 1600x1000 -p - -k de -r clipboard:CLIPBOARD
+}
+alias rdp=_rdp
+
 #virtualbox
 
 _vbstart(){
   vboxmanage startvm $1 --type gui
- }
+}
 
 alias vbstart=_vbstart
 
@@ -40,9 +48,12 @@ _vbstop(){
 
 alias vbstop=_vbstop
 
+
+#mega 
 alias megadn='megacmd sync mega:/exchange/ ~/Downloads/mega-exch/'
 alias megaup='megacmd sync ~/Downloads/mega-exch/ mega:/exchange/'
 
+#tmuxp
 _tmuxpload(){
   tmuxp load -y ~/.tmuxp/$1.yaml
 }

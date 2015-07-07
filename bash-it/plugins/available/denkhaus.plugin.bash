@@ -21,7 +21,7 @@ git_isdirty(){
 
 git_autopush(){
 	epoch=$(date +%s)
-	git add . && git_isdirty && git commit -am "autopush@$epoch"
+	git add . && git commit -am "autopush@$epoch"
 	git push --all
 }
 
