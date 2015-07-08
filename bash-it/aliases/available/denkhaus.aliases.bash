@@ -26,6 +26,14 @@ alias grm='git reset --merge'
 alias portuse='sudo netstat -nap | grep $1'
 alias findbig='sudo du -h $1 | grep [0-9]G'
 
+# print active connections
+
+_netcp(){
+  netstat -an | grep ESTABLISHED | awk '{print $5}' | awk -F: '{print $1}' | sort | uniq -c | awk '{ printf("%s\t%s\t",$2,$1) ; for (i = 0; i < $1; i++) {printf("*")}; print "" }' 
+}
+
+alias netcp=_netcp
+
 
 #rdesktop 
 
