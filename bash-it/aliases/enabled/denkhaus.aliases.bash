@@ -1,0 +1,1 @@
+/home/bashit/.bash_it/aliases/available/denkhaus.aliases.bash
