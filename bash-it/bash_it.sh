@@ -63,15 +63,3 @@ unset config_file
 if [[ $PROMPT ]]; then
     export PS1=$PROMPT
 fi
-
-# Adding Support for other OSes
-PREVIEW="less"
-[ -s /usr/bin/gloobus-preview ] && PREVIEW="gloobus-preview"
-[ -s /Applications/Preview.app ] && PREVIEW="/Applications/Preview.app"
-
-# Load all the Jekyll stuff
-
-if [ -e $HOME/.jekyllconfig ]
-then
-  . $HOME/.jekyllconfig
-fi
