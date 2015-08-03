@@ -41,7 +41,6 @@ export TODO="t"
 
 # Load Bashit
 source $BASH_IT/bash_it.sh
-source ~/.bash_local
 
 if [ -f /etc/bash_completion ]; then
    . /etc/bash_completion
