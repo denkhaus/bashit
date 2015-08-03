@@ -1,1 +1,0 @@
-/home/bashit/.bash_it/plugins/available/git.plugin.bash

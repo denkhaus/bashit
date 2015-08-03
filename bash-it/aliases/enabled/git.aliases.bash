@@ -1,1 +1,0 @@
-/home/bashit/.bash_it/aliases/available/git.aliases.bash
