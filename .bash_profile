@@ -45,3 +45,6 @@ source $BASH_IT/bash_it.sh
 if [ -f /etc/bash_completion ]; then
    . /etc/bash_completion
 fi
+
+## show todos
+t
