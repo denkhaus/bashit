@@ -1,0 +1,3 @@
+#!/bin/bash
+cd bash-it/ && git commit -a
+cd ~/ &&  git commit -am "update" && git push
